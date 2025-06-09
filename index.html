@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WPP Sender Local</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      button {
+        margin: 5px 0;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+      #log {
+        margin-top: 20px;
+        height: 300px;
+        overflow-y: auto;
+        border: 1px solid #ccc;
+        padding: 10px;
+        white-space: pre-wrap;
+        background: #f9f9f9;
+      }
+      #file-name {
+        margin: 10px 0;
+        font-weight: bold;
+      }
+    </style>
+</head>
+<body>
+    <h1>Envio de mensagens WhatsApp</h1>
+
+    <input type="file" id="csvFile" accept=".csv" style="display:none" />
+    <button id="btnSelectFile">Selecionar Arquivo CSV</button>
+
+    <div id="file-name"></div>
+
+    <button id="btnConnect" disabled>Conectar ao WhatsApp</button>
+    <button id="btnSend" disabled>Enviar Mensagens</button>
+
+    <div id="qr-container" style="margin: 20px 0; text-align: center; display: none;">
+      <p>Escaneie o QR Code com seu WhatsApp:</p>
+      <img id="qr-img" src="" alt="QR Code" style="width: 250px; height: 250px;" />
+    </div>
+
+    <div id="log" readonly></div>
+
+    <script src="./renderer.js"></script>
+</body>
+</html>
